@@ -3,8 +3,10 @@
 </script>
 
 <template>
-    <h1>{{ $t('welcome') }}</h1>
-    <p>{{ $t('about') }}</p>
+  <div class="px-2 py-1">
+    <h1 class="font-weight-bold">LOGO</h1>
+
+  </div>
 </template>
 
 <style scoped>

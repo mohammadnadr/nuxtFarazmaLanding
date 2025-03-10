@@ -48,4 +48,7 @@ export default defineNuxtConfig({
       redirectOn: 'root',
     },
   },
+  css: [
+    '~/styles/main.scss',
+  ],
 });

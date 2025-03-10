@@ -1,16 +1,15 @@
 <template>
-  <div dir="rtl">
-
-  <NuxtLayout >
-    <v-app>
+  <NuxtLayout  >
+    <v-app :class="{ 'rtl': isRTL, 'ltr': !isRTL }" >
       <NuxtPage />
     </v-app>
   </NuxtLayout>
-  </div>
 
 </template>
 
 <script setup>
+import { computed } from 'vue';
+
 import { useI18n } from 'vue-i18n';
 import { useCookie } from 'nuxt/app';
 
@@ -26,10 +25,7 @@ const initializeLocale = () => {
 onMounted(() => {
   initializeLocale();
 });
-// import { useI18n } from 'vue-i18n';
-// import { computed } from 'vue';
-//
-// const { locale } = useI18n();
-//
-// const isRTL = computed(() => locale.value === 'fa');
+const isRTL = computed(() => locale.value === 'fa');
 </script>
+<style>
+</style>
